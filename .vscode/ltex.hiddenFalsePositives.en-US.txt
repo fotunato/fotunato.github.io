@@ -1,0 +1,1 @@
+{"rule":"PASSIVE_VOICE","sentence":"^\\Qspecifies the name of the form the name is submitted with the value to the server\\E$"}
