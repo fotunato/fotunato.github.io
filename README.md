@@ -339,7 +339,7 @@ syntax:
 **INPUT**<br>
 *continued in detail below*
 
-**SELECT tag**
+**SELECT tag**<br>
 **select** specifies an input field with a dropdown menu
 
 syntax:
