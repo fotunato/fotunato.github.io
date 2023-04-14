@@ -1182,3 +1182,81 @@ add _placeholder text_ to **all** _text fields_
 
 *tip*<br>
 add _unique name_ (_names_) attr to **all** _submittable text_ as _best practice_
+
+### Validation of `<input>` & `<form>`<br>
+when input is received, the browser must first validate the input to determine if the input is within pre-defined parameters before the input is submitted to the server
+
+pre-defined parameters
+these parameters can be defined by:
+1. the author of the webpage
+2. the browser itself
+
+validation by the author of the webpage
+there are different ways to provide the parameters:
+1. required attr<br>
+`<input type="” required="REGEX">`<br>
+regex patterns are used to provide the patterns for the required attr
+2. Javascript
+Javascript can be used to validate input data
+
+Validation by the browser itself (auto-validation)<br>
+The browser auto-validates the input with auto-defined patterns
+
+Why is validation important
+1. user experience
+2. security
+
+user experience<br>
+The user may input incorrect info by mistake.<br>
+If the wrong information is validated, incorrect data is collected<br>
+This will invariably lead to problems down the line<br>
+We can use :valid and :invalid pseudo-classes to specify changes which occur when the  user enters the wrong info or the right info<br>
+
+security<br>
+Hackers intentionally send malicious code as input<br>
+This is so that if this malicious code is validated, this data is sent up and injected into the server<br>
+The hacker now has their malicious code in the server
+Validation blocks this malicious code from being sent to the server<br>
+As such, validation provides a LAYER OF SECURITY<br>
+
+:valid and :invalid pseudo-classes<br>
+:valid pseudo-class<br>
+this specifies a state where the input has been validated<br>
+we can specify changes like a green input background or adding a “tick” to inform the user that their data is correct has been validated<br>
+
+:invalid pseudo-class<br>
+this specifies a state where the input has been invalidated or has not been validated<br>
+this happens when the collected data does not meet the requirements for the pre-defined patterns for validation<br>
+we can specify changes like a green input background or adding a “tick” to inform the user that their data is correct has been validated<br> 
+
+Client-side vs Server-side validation<br>
+<u>Client-side validation</u> refers to validation which when a client inputs data before the data is submitted to the server.<br>
+Constraint validation comprises all the steps of validation which are introduced into a document on the client-side<br>
+
+<u>Server-side validation</u> involves validation after the data has been submitted up to the server.
+Languages like php, python & js are called server-side languages because <br>
+js is a client-side language as well though<br>
+They are used to develop code which deploys on server-side rather than client-side<br>
+Optimally, it is advised to provide both client-side and server-side validation to provide double-layer protection<br>
+
+Constraint validation<br>
+HTML5 introduced the use of constraint validators in 2014.<br>
+Here, client-side validation is provided through the use of:<br>
+1. input types<br>
+Simply, we specify the input type<br>
+2. input attr<br>
+Simply, we specify ALL the necessary input attr
+i.e we provide all necessary attr like min, max, step as it applies to that specific input type<br>
+3. pseudo-class selectors<br>
+Simply, we specify pseudo-classes like :valid & :invalid to specify a new state<br>
+eg.
++ :valid
++ :invalid
++ :required (selects required inputs) 
++ :invalid (selects inputs with invalid values)<br>
+
+_i.e Values which will not appear like a value less than min attr_<br>
+
+
+By using, constraint validation, we provide constraints<br> for validation
+Basically, we follow constraint validation when we follow good-practices for input types<br>
