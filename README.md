@@ -1177,8 +1177,8 @@ _min-height_<br>
 This applies to **text fields** _eg. **input** | **textarea**_<br>
 We can specify the _min height_ of text in these _text fields_****
 
-*tip*
+*tip*<br>
 add _placeholder text_ to **all** _text fields_
 
-*tip*
+*tip*<br>
 add _unique name_ (_names_) attr to **all** _submittable text_ as _best practice_
