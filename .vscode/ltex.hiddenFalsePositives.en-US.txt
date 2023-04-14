@@ -10,3 +10,4 @@
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qformtarget formtarget specifies where to display the response after the form submission>\\E$"}
 {"rule":"TOO_LONG_SENTENCE","sentence":"^\\Q_top this loads the top-level browsing context of the current browser document after submission this is the top-most ancestor of the current browser document without an ancestor if there is no top, the browser loads the current browser document as _self\\E$"}
 {"rule":"TOO_LONG_SENTENCE","sentence":"^\\Q_top this loads the top-level browsing context of the current browser document after submission this is the top-most ancestor of the current browser document without an ancestor if there is no top, the browser loads the current browser document as _self\\E$"}
+{"rule":"HAVE_PART_AGREEMENT","sentence":"^\\Qthis is used when the form contains \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q elements which have file attr type\\E$"}

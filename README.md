@@ -90,16 +90,6 @@ action specifies the URL which processes the form submission
 <br>
 <br>
 
-<u>method</u>
-
-```htm
-<form method="http-method-used-to-send-data-to client” action="url-which-will-receive-the-data">
-</form>
-```
-
-*overridden by formmethod*
-<br>
-<br>
 
 <u>enctype</u>
 
@@ -125,7 +115,7 @@ enctype specifies the type of encoding in the form
 
  3. text/plain
 
-    this is used when security is not a concern like during debugging
+    this is used when security is not a concern like during debugging<br><br>
 
 <u>method</u>
 
@@ -152,16 +142,16 @@ specifies the HTTP method to submit the form to the server
     get does not update the server<br>
     get is not as secure as post because unlike post, get includes the data in the URL
 
-3. novalidate
-
-    specifies that the form submission should not be validated
-
 ```htm
 <form novalidate>
 </form>
 ```
 
 *overridden by formnovalidate*
+
+3. novalidate
+
+    specifies that the form submission should not be validated<br><br>
 
 <u>target</u>
 
@@ -188,14 +178,14 @@ target specifies where to display the response after submitting the form
 4. _top
     this loads the top-level browsing context of the current browser document after submission<br>
     this is the top-most ancestor of the current browser document without an ancestor<br>
-    if there is no top, the browser loads the current browser document as _self
+    if there is no top, the browser loads the current browser document as _self<br><br>
 
 ### Input Form Attributes
 
 1. formaction<br>
 2. formenctype<br>
 3. formmethod<br>
-4. formnovalidate
+4. formnovalidate<br>
 
 These <u>input form attributes</u> are added to form inputs
 they will override their form attribute counterpart
@@ -240,6 +230,6 @@ formnovalidate specifies that the form submission should not be validated
   formtarget specifies where to display the response after the form submission>
 
 ```htm
-<input type="" formtarget="novalidate">
+<input type="" formtarget="_self | _blank | _parent | _target">
 </form>
 ```
