@@ -1,1 +1,12 @@
 {"rule":"PASSIVE_VOICE","sentence":"^\\Qspecifies the name of the form the name is submitted with the value to the server\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\Qthis is the default enctype name and value are separated by &\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\Qthis is the most-used method post is used to send data to the server post updates the server post is more secure because unlike get, post does not include the data in the URL\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qoverridden by formnovalidate\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qoverridden by formtarget\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThese input form attributes are added to form inputs they will override their form attribute counterpart\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qformenctype formenctype specifies the type of encoding in the form\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qformmethod formmethod specifies the HTTP method to submit the form to the server\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qformnovalidate formnovalidate specifies that the form submission should not be validated\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qformtarget formtarget specifies where to display the response after the form submission>\\E$"}
+{"rule":"TOO_LONG_SENTENCE","sentence":"^\\Q_top this loads the top-level browsing context of the current browser document after submission this is the top-most ancestor of the current browser document without an ancestor if there is no top, the browser loads the current browser document as _self\\E$"}
+{"rule":"TOO_LONG_SENTENCE","sentence":"^\\Q_top this loads the top-level browsing context of the current browser document after submission this is the top-most ancestor of the current browser document without an ancestor if there is no top, the browser loads the current browser document as _self\\E$"}

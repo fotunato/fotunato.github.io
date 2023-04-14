@@ -1,2 +1,9 @@
 formaction
 enctype
+formmethod
+formenctype
+x-www-form-urlencoded
+novalidate
+formnovalidate
+formtarget
+formnovalidate
