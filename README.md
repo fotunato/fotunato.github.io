@@ -90,7 +90,6 @@ action specifies the URL which processes the form submission
 <br>
 <br>
 
-
 <u>enctype</u>
 
 enctype specifies the type of encoding in the form
@@ -173,12 +172,12 @@ target specifies where to display the response after submitting the form
 
 3. _parent
     this loads the parent browsing context of the current browser document after submission<br>
-    if there is no parent, the browser loads the current browser document as _self
+if there is no parent, the browser loads the current browser document as_self
 
 4. _top
     this loads the top-level browsing context of the current browser document after submission<br>
     this is the top-most ancestor of the current browser document without an ancestor<br>
-    if there is no top, the browser loads the current browser document as _self<br><br>
+if there is no top, the browser loads the current browser document as_self<br><br>
 
 ### Input Form Attributes
 
@@ -233,3 +232,161 @@ formnovalidate specifies that the form submission should not be validated
 <input type="" formtarget="_self | _blank | _parent | _target">
 </form>
 ```
+
+### Form elements
+
+These are elements which are nested in the form element
+
+ 1. fieldset
+ 2. legend
+ 3. label
+ 4. input
+ 5. select
+ 6. option
+ 7. textarea
+ 8. button
+ 9. list
+ 10. datalist
+ 11. output
+ 12. optgroup
+
+**FIELDSET tag**<br>
+
+this is used to group controls into related forms<br>
+controls are form elements with input fields which receive data<br>
+this also draws a box around related elements
+
+syntax:
+
+```htm
+<form id="unique-identifier">
+<fieldset
+form=id="associated-unique-identifier-from-form"
+name="name-of-fieldset”
+disabled
+>
+ <legend></legend>
+  <label></label>
+  <label></label>
+  <label></label>
+</fieldset>
+</form>
+```
+
+**FIELDSET attributes**<br>
+
+**fieldset** specifies and associates <u>form controls</u>
+
+*form*<br>
+_form_ attr is given a unique identifier which associates the fieldset with a form<br>
+The fieldset does not need to be nested inside the form which they are already associated, but it is good practice to nest the fieldset inside it’s associated form even if they are already associated by form and id attr
+
+*name*<br>
+_name_ attr is the name of the fieldset<br>
+
+*disabled*
+_disabled_ attr makes the form’s descendants <u>uneditable</u>, <u>unsubmittable</u> and <u>immutable</u>
+
+**LEGEND tag**
+**legend** specifies a caption for a **fieldset**
+
+syntax:
+
+```htm
+<form>
+<fieldset>
+ <legend></legend>
+  <label></label>
+  <label></label>
+  <label></label>
+</fieldset>
+</form>
+```
+
+**LABEL tag**<br>
+**label** specifies a <u>caption</u> for the controls which it’s associated with:
+
+ 1. input
+ 2. button
+ 3. select
+ 4. textarea
+ 5. output
+ 6. meter*(out of scope of topic)
+ 7. progress
+
+**label** is automatically associated with its 1st nested descendant<br>
+That said, it is good practice to associate the label with it’s associated element<br>
+The element associated with the label (like input) may be placed outside the label but in this case, the associated element’s for attr should have been associated with the id attr of the label element.<br>
+
+syntax:
+
+```htm
+<form>
+<fieldset>
+ <legend>
+  <label for="associated-unique-identifier">
+   <input id=" for="associated-unique-identifier-from-fieldset">
+  </label>
+</fieldset>
+</form>
+```
+
+**LABEL attributes**
+
+*for*<br>
+*for* attr associates the **label** with the *id* attr of the **label** element.
+
+**INPUT**<br>
+*continued in detail below*
+
+**SELECT tag**
+**select** specifies an input field with a dropdown menu
+
+syntax:
+
+```htm
+<form id="unique-identifier">
+ <label>
+  <select
+form=id="associated-unique-identifier-from-form"
+name="name-for-select-field”
+autocomplete="on” | “off”
+disabled
+multiple
+required
+size="input-field-width-OR-submit-button-height”
+>
+   <option>
+  </select> 
+ </label>
+</form>
+```
+
+**SELECT attributes**<br>
+
+_form_<br>
+_form_ attr is given a <U>unique identifier</U> which associates the select with a form<br>
+**select** <u>does not need</u> to be <u>nested inside the form</u> if they are <u>already associated</u>, but it is <u>good practice</u> to nest the **select** inside it’s <u>associated form</u> even if they are already associated by form and id attr
+<br>
+
+_name_<br>
+_name_ of the **select** control
+<br>
+
+_autocomplete_<br>
+_autocomplete_ specifies if **select** control will be autocompleted
+<br>
+
+_disabled_<br>
+_disabled_ specifies if **select** control will be disabled
+<br>
+
+_multiple_<br>
+_multiple_ specifies if multiple `<option>` controls can be selected
+<br>
+
+_required_<br>
+_required_ specifies if select control will be required
+
+_size_<br>
+_size_ specifies the **input field** <u>width</u> OR **submit button** <u>height</u>

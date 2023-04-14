@@ -8,3 +8,9 @@ formnovalidate
 formtarget
 formnovalidate
 attr
+fieldset
+datalist
+optgroup
+FIELDSET
+uneditable
+unsubmittable
