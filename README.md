@@ -390,3 +390,100 @@ _required_ specifies if select control will be required
 
 _size_<br>
 _size_ specifies the **input field** <u>width</u> OR **submit button** <u>height</u>
+
+**OPTION tag**<br>
+**option** specifies the **option**(s) control(s) for the _parent_ `<select>` element
+
+syntax:
+
+```htm
+<form id="unique-identifier">
+ <label>
+  <select>
+   <option
+value="value-which-is-submitted-to-server"
+disabled
+label
+selected
+>
+   <option>
+  </select> 
+ </label>
+</form>
+```
+
+**OPTION attr**<br>
+
+_value_<br>
+_value_ specifies text which is submitted to the server<br>
+if _no value_ is given, the _visible text_ is submitted to the server
+<br>
+
+_disabled_<br>
+_disabled_ specifies if the <u>selected option</u> is _disabled_
+<br>
+
+_label_<br>
+_label_ specifies the text which is <u>visible</u>
+if _label_ and the normal <u>visible text</u> are both provided, _label_ takes <u>precedence</u>
+<br>
+
+_selected_<br>
+_selected_ specifies that the option is _selected_ <u>by default</u> when the page loads
+<br>
+
+_option_<br>
+_option_ specifies a grouping of the `<option>` controls in the within a `<select>` control
+<br>
+
+syntax:
+
+```htm
+<select>
+ <optgroup
+ disabled
+ label
+ >
+  <option>
+  <option>
+ </optgroup>
+</select>
+```
+
+_button_<br> 
+_button_ <u>creates</u> a _button_
+<br>
+
+syntax:
+
+```htm
+<input type="button" value="text-on-button">
+```
+
+_submit creates  button as well but a button created from button type has NO DEFAULT STYLING whilst a button created from submit type has DEFAULT STYLING_
+<br>
+
+_datalist_<br>
+_datalist_ specifies a pre-defined list for an associated input
+the user can input text into the input field<br>
+
+syntax:
+
+```htm
+<input list="unique-identifier">
+<datalist id="unique-identifier-from input-list”>
+ <option value="option1”>
+ <option value="option2”>
+ <option value="option3”>
+</datalist>
+```
+
+**_select_** vs _datalist_
+in _select_, the user can <u>only select one</u> (or more if multiple attr is specified)
+in _datalist_, the user can <u>type into the text field</u> which means the user has <u>infinitely more options</u>
+<br>
+
+_select_ is used to provide the <u>ONLY AVAILABLE OPTIONS</u> for the user but _datalist_ options are <u>more of a suggestion</u> since the user can choose one of those or simply type in their choice <u>which does not have to be one of the available choices</u>
+
+**INPUT types**<br>
+**INPUT types** determine <u>what type of input</u> should be collected
