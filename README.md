@@ -1,3 +1,7 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Forum&family=Josefin+Sans&family=Khula&family=Libre+Baskerville&family=Philosopher&family=Playfair+Display&family=Questrial&family=Raleway&family=Sora&display=swap');
+</style>
+
 # MY WIKI
 
 # Forms
@@ -8,7 +12,7 @@ The form element is used to group related input through input fields, radio butt
 
 <u>accept-charset</u>
 
-specifies accepted character encoding for the form
+specifies type of character encoding the server uses to interpret the form data for the form<br>
 we can add multiple character encoding by adding a space between them
 
 syntax:
@@ -141,16 +145,17 @@ specifies the HTTP method to submit the form to the server
     get does not update the server<br>
     get is not as secure as post because unlike post, get includes the data in the URL
 
-```htm
-<form novalidate>
-</form>
-```
 
-*overridden by formnovalidate*
 
 3. novalidate
 
-    specifies that the form submission should not be validated<br><br>
+```htm
+ <form novalidate>
+ </form>
+```
+
+*overridden by formnovalidate*
+specifies that the form submission should not be validated<br><br>
 
 <u>target</u>
 
@@ -284,7 +289,7 @@ The fieldset does not need to be nested inside the form which they are already a
 *name*<br>
 _name_ attr is the name of the fieldset<br>
 
-*disabled*
+*disabled*<br>
 _disabled_ attr makes the form’s descendants <u>uneditable</u>, <u>unsubmittable</u> and <u>immutable</u>
 
 **LEGEND tag**
@@ -316,7 +321,7 @@ syntax:
 
 **label** is automatically associated with its 1st nested descendant<br>
 That said, it is good practice to associate the label with it’s associated element<br>
-The element associated with the label (like input) may be placed outside the label but in this case, the associated element’s for attr should have been associated with the id attr of the label element.<br>
+The element associated with the label (like input) may be placed outside the label but in this case, the associated element’s _for_ attr should have been associated with the id attr of the label element.<br>
 
 syntax:
 
@@ -386,7 +391,7 @@ _multiple_ specifies if multiple `<option>` controls can be selected
 <br>
 
 _required_<br>
-_required_ specifies if select control will be required
+_required_ specifies if `<select>`</select> control will be required
 
 _size_<br>
 _size_ specifies the **input field** <u>width</u> OR **submit button** <u>height</u>
@@ -424,16 +429,12 @@ _disabled_ specifies if the <u>selected option</u> is _disabled_
 <br>
 
 _label_<br>
-_label_ specifies the text which is <u>visible</u>
+_label_ specifies the text which is <u>visible</u><br>
 if _label_ and the normal <u>visible text</u> are both provided, _label_ takes <u>precedence</u>
 <br>
 
 _selected_<br>
 _selected_ specifies that the option is _selected_ <u>by default</u> when the page loads
-<br>
-
-_option_<br>
-_option_ specifies a grouping of the `<option>` controls in the within a `<select>` control
 <br>
 
 syntax:
@@ -449,18 +450,9 @@ syntax:
  </optgroup>
 </select>
 ```
-
-_button_<br> 
-_button_ <u>creates</u> a _button_
 <br>
 
-syntax:
-
-```htm
-<input type="button" value="text-on-button">
-```
-
-_submit creates  button as well but a button created from button type has NO DEFAULT STYLING whilst a button created from submit type has DEFAULT STYLING_
+_submit_ creates  button as well but a button created from **button** type has NO DEFAULT STYLING whilst a button created from submit type has DEFAULT STYLING_
 <br>
 
 _datalist_<br>
@@ -488,12 +480,13 @@ _select_ is used to provide the <u>ONLY AVAILABLE OPTIONS</u> for the user but _
 **INPUT types**<br>
 **INPUT types** determine <u>what type of input</u> should be collected
 <br>
+<br>
 
-**INPUT attr**
-_accept_
-_accept_ determines _what type of file’s_ (_file-types_) should be <u>accepted by the input</u>
-_accept_ applies to ONLY **file** type
-<u>Wildcards</u> can be used to target <u>more than one file-type</u>:
+**INPUT attr**<br>
+_accept_<br>
+_accept_ determines _what type of file_ (_file-types_) should be <u>accepted by the input</u><br>
+_accept_ applies to ONLY **file** type<br>
+<u>Wildcards</u> can be used to target <u>more than one file-type</u>:<br>
 
 ```htm
 <ul>
@@ -552,7 +545,7 @@ _new-password_<br>
 _password_ is <u>not autocompleted</u> since this <u>specifies a new password</u><br>
 
 _name_<br>
-`<input type="” autocomplete="name"><br`
+`<input type="” autocomplete="name"`<br>
 _name_ is <u>autocompleted</u><br>
 
 _email_<br>
@@ -566,7 +559,7 @@ _username_ is <u>autocompleted</u><br>
 _cc-name_<br>
 _cc-number_<br>
 _etc_<br>
-_both are for cc details as well as more cc-*_<br>
+_both are for cc details as well as other cc-*_<br>
 
 More values exist for autocomplete can be found [here]([https://](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete))
 
@@ -607,7 +600,7 @@ The <u>source</u> of the resource is <u>different</u> from the <u>native documen
 <u>No user-credentials</u> are <u>required</u> to fetch the resource<br>
 
 _user-credentials_<br>
-`<scriptfile type | link | img src="external source of resource” cross-origin="user-credentials">`<br>
+`<script | link | img src="external source of resource” cross-origin="user-credentials">`<br>
 The _source_ of the resource is _different_ from the <u>native document</u><br>
 _user-credentials_ are <u>required</u> to <u>fetch the resource</u><br>
 
@@ -642,7 +635,7 @@ _for_<br>
 `<label for="unique-identifier"></label>`<br>
 	`<input id="unique-identifier">`<br>
 _for_ is added to <label> and <output> to <u>associate</u> them to their associated <u>controls</u><br>
-an _id_ attr is added to the _associated_ <u>input</u> tags<br>
+an _id_ attr is added to the _associated_ <u>controls</u><br>
 
 _height_ & _width_<br>
 `<input type="image" src="” height="height-of-image” width="width-of-image”>`<br>
@@ -724,7 +717,7 @@ _multiple_ specifies that a user can _add_ <u>more than one value</u> into an <u
 _multiple_ applies to:
 + file
 + email
-+ `</select>`
++ `<select>`
 
 _file_<br>
 `<input type="file” multiple>`<br>
@@ -758,10 +751,10 @@ These <u>regex</u> define a <u>string</u> _against which_ the _input’s value_ 
 Using <u>regex</u> simply comes down to _understanding_ the _strings_ which _come together_ to _form_ a **LARGER** <u>regex</u> _string component_<br>
 
 There are many types of <u>regex</u>:<br>
-+ Quantifiers
-	1. 
-TBD
-**pattern attr should be used with title attr
+1. Quantifiers<br>
+
+TBD<br>
+_pattern_ attr should be used with _title_ attr
 
 _placeholder_<br>
 `<input type="” placeholder>`<br>
@@ -779,17 +772,17 @@ _readonly_ specifies an _input form_ to be:<br>
 + submitted with the form (unlike disabled)
 :read-only pseudo-class is used to target input forms in the read-only state
 readonly applies to:
-+ date
-+ datetime-local
-+ email
-+ month
-+ number
-+ password
-+ search
-+ tel
-+ text
-+  time
-+  url
+  1. date
+  2. datetime-local
+  3. email
+  4. month
+  5. number
+  6. password
+  7. search
+  8. tel
+  9. text
+  10.  time
+  11.  url
 <br>
 
 use cases<br>
@@ -799,7 +792,7 @@ use cases<br>
 
 _required_<br>
 `<input type="” required>`<br>
-_required_ specifies that an **input** <u<br>>should have a value</u> 
+_required_ specifies that an **input** <u>should have a value</u><br> 
 if the _specified input_ has <u>no value</u>, a _prompt_ appears when the **form** is _submitted_<br>
 _required_ attr is used to <u>stop the browser</u> for <u>validating</u>/ <u>auto-validating</u> a **form** _IF THE INPUT IS EMPTY_.<br>
 
@@ -861,7 +854,7 @@ Unlike _placeholder_ attr,the _value_ input is _submitted_ when **no input** is 
 ### INPUT types
 _button_<br>
 `<input type="button" value="text-on-button">`<br>
-_button_ creates a well...<u>button</u><br><br>
+_button_ creates a _well..._<u>_button_</u><br><br>
 _**submit** creates **button** as well but a <u>button</u> created from **button type** has <u>NO DEFAULT STYLING</u> whilst a **button** created from **submit type** has <u>DEFAULT STYLING_</u>
 
 _checkbox_<br>
@@ -888,10 +881,11 @@ If not, the _color_ <u>reverts</u> to the **INPUT ** type, which is **black**<br
 _date_<br>
 `<input type="date"` 
 `value="yyyy-mm-dd" `
-`min="earliest-ddate-to-accept"`
+`min="earliest-date-to-accept"`
 `max="latest-date-to-accept”`
 `step=""interval-as-user-chooses-dates-in-DAYS”`
 `>`<br>
+
 for **STEP**, 1 =  1day<br>
 _value_ attr specifies the _default date_ in the <u>input field</u> when the <u>webpage</u> _first loads_
 _date_ type creates an _input field_ which <u>receives dates</u><br>
@@ -899,16 +893,15 @@ On _some browsers_, a _special interface_ appears.
 the _format_ of the **date** must be **yyyy**-**mm**-**dd**<br>
 
 _datetime-local_<br>
-`<input type="datetime-local" `<br>
-`value="yyyy-mm-dd-HH-MM" `<br>
-`min="earliest-date-to-accept"`<br>
-`max="latest-date-to-accept”`<br>
-`step=""interval-as-user-chooses-time-in-SECONDS”`<br>
-`>`<br>
+`<input type="datetime-local" ` `value="yyyy-mm-dd-HH-MM" `
+`min="earliest-date-to-accept"`
+`max="latest-date-to-accept”`
+`step=""interval-as-user-chooses-time-in-SECONDS”`>`<br>
+
 for **STEP**, 60 = 60s<br>
 _value_ attr specifies the _default_ <u>date</u> & <u>time</u> in the _input field_ when the <u>webpage</u> _first loads_.<br>
 _datetime-local_ type _creates_ an _input field_ which _receives_ <u>dates</u> & <u>time</u><br>
-On _some browsers_, a _special interface_ occurs
+On _some browsers_, a _special interface_ appears<br>
 the _format_ of the <u>date</u> must be **yyyy**-**mm**-**dd**<br>
 
 _email_<br>
@@ -916,16 +909,17 @@ _email_<br>
 _email_ type _creates_ an _input field_ which _receives_ <u>email input</u><br>
 
 _file_<br>
-`<input type="file" `<br>
-`accept="accepted-file-type”`<br>
-`capture="user | environment”`<br>
-`multiple`<br>
+`<input type="file"`
+`accept="accepted-file-type”`
+`capture="user | environment”`
+`multiple`
 `>`<br>
+
 **file** type _creates_ an _input field_ which _receives_ **uploaded files**<br>
 
 _hidden_<br>
 `<input type="hidden” name="” value="hidden-content">`<br>
-_hidden_ input _creates_ an _input field_ which is _hidden_ on the document/ _not visible_ to the user
+_hidden_ input _creates_ an _input field_ which is _hidden_ on the document/ _not visible_ to the user<br>
 The _hidden content_ can be _accessed_ via the _browser’s inspection tools_ though<br>
 the _name_ attr is normally used to <u>add a name</u> for the **input**<br>
 for _hidden_ type though, _name_ can be set to “_charset_” prop which causes the inputted value type to be submitted with it’s prop set to the character encoding<br>
@@ -934,18 +928,19 @@ use cases<br>
 1. secure content may be hidden on the document to add a layer of security for the webpage<br>
 
 _image_<br>
-`<input type="image” `<br>
-`scr="source-of-image”`<br>
-`alt="alternative-text-shown-if-image-is-not-loaded"`<br>
-`height="height-of-image"`<br>
-`width="width-of-image"`<br>
-`formaction="”`<br>
-`formenctype="”on value="suggested-step3“`<br>
-`formmethod="”`<br>
-`formnovalidate="”`<br>
-`formtarget="”`<br>
+`<input type="image” `
+`scr="source-of-image”`
+`alt="alternative-text-shown-if-image-is-not-loaded"`
+`height="height-of-image"`
+`width="width-of-image"`
+`formaction="”`
+`formenctype="”on value="suggested-step3“`
+`formmethod="”`
+`formnovalidate="”`
+`formtarget="”`
 `>`
 <br>
+
 
 _image_ type specifies an _image_ which <u>appears</u> as a <u>submit button</u><br>
 
@@ -953,13 +948,13 @@ use cases<br>
 1. any photo/ flavicon can be used as a submit button
 
 _month_<br>
-`<input type="month”`<br>
-`value="YYYY-MM(default-month)”`<br>
-`list="unique-identifier”`<br>
-`max="YYYY-MM(latest-date-allowed)”`<br>
-`min="YYYY-MM(earliest-date-allowed)”`<br>
-`readonly`<br>
+`<input type="month”`
+`value="YYYY-MM(default-month)”`
+`max="YYYY-MM(latest-date-allowed)”`
+`min="YYYY-MM(earliest-date-allowed)”`
+`readonly`
 `step="number-intervals” | (number is allowed)`<br>
+`list="unique-identifier”`<br>
 `<datalist id="associated-unique identifier”>`<br>
 `	<option value="suggested-month1”>`<br>
 `	<option value="suggested-month2”`<br>
@@ -969,30 +964,30 @@ _month_<br>
 _month_ type specifies an **input field** which _allows_ the user to <u>input a date</u><br>
 a <u>date picker</u> may _appear_ in _some browsers_<br>
 
-_number_
-`<input type="number”`<br>
-`value="YYYY-MM(default-month)”`<br>
-`max="YYYY-MM(latest-date-allowed)”`<br>
+_number_<br>
+`<input type="number”`
+`value="YYYY-MM(default-month)”`
+`max="YYYY-MM(latest-date-allowed)”`
 `min="YYYY-MM(earliest-date-allowed)”`<br>
-`maxlength="maximum-number-of-characters”`<br>
+`maxlength="maximum-number-of-characters”`
+`minlength="minimum-number-of-characters"`
 `step="number-intervals” | (number is allowed)`<br>
-`minlength="minimum-number-of-characters"`<br>
 `list="unique-identifier”`<br>
 `<datalist id="associated-unique identifier-with-list”>`<br>
-`	<option value="suggested-month1”>`<br>
-`	<option value="suggested-month2”`<br>
-`	<option value="suggested-month3“`<br>
+`	<option value="suggested-number1”>`<br>
+`	<option value="suggested-number2”`<br>
+`	<option value="suggested-number3“`<br>
 `</datalist>`<br>
 `>`<br>
 
 _password_<br>
-`<input type="password"`<br>
-`value="default-password(can be empty)”`<br>
-`maxlength="maximum-number-of-characters”`<br>
-`minlength="minimum-number-of-characters"`<br>
-`placeholder="placeholder-text”`<br>
-`readonly`<br>
-`size="size-of-input-field”`<br>
+`<input type="password"`
+`value="default-password(can be empty)”`
+`maxlength="maximum-number-of-characters”`
+`minlength="minimum-number-of-characters"`
+`placeholder="placeholder-text”`
+`readonly`
+`size="size-of-input-field”`
 `autocomplete="”`<br>
 `>`<br>
 _password_ specifies a _password field_ is _required_ for _entering_ <u>passwords</u><br> 
@@ -1025,7 +1020,7 @@ _range_<br>
 _range_ specifies a <u>slider</u>
 The _minimum_ and _maximum_ <u>extremes</u> can be _specified_<br>
 
-*_additional_ _CSS props_ (_not fully supported_ on all browsers)
+*_additional_ _CSS props_ (_not fully supported_ on all browsers)<br>
 **appearance** - for styling appearance<br>
 **orient** - for styling vertical / horizontal orientation<br>
 
@@ -1162,10 +1157,10 @@ determines the _intervals_ in the _time_ (in _seconds_)<br>
 when _step_ is _not specified_, _default_ is **‘60’**/ **1 minute**<br>
  
 EXAMPLE<br>
-`<input type="time” max=”00:00“ min="01:00" step="600">`
+`<input type="time” max=”00:00“ min="01:00" step="600">`<br>
 The user can choose between **00:00** and **01:00** at **10 minute** (**60s** x **10**) _intervals_<br>
 
-_Time-zone_ is <u>not specified</u> when using <time> attr
+_Time-zone_ is <u>not specified</u> when using <time> attr<br>
 _format_ for **time** is **00:00** -> **24:00**<br>
 
 _general attributes_<br>
@@ -1191,7 +1186,7 @@ these parameters can be defined by:
 1. the author of the webpage
 2. the browser itself
 
-validation by the author of the webpage
+validation by the author of the webpage<br>
 there are different ways to provide the parameters:
 1. required attr<br>
 `<input type="” required="REGEX">`<br>
@@ -1210,21 +1205,21 @@ user experience<br>
 The user may input incorrect info by mistake.<br>
 If the wrong information is validated, incorrect data is collected<br>
 This will invariably lead to problems down the line<br>
-We can use :valid and :invalid pseudo-classes to specify changes which occur when the  user enters the wrong info or the right info<br>
+We can use _**:valid**_ and **_:invalid_** pseudo-classes to specify changes which occur when the  user enters the wrong info or the right info<br>
 
 security<br>
 Hackers intentionally send malicious code as input<br>
 This is so that if this malicious code is validated, this data is sent up and injected into the server<br>
-The hacker now has their malicious code in the server
+The hacker now has their malicious code in the server<br>
 Validation blocks this malicious code from being sent to the server<br>
 As such, validation provides a LAYER OF SECURITY<br>
 
-:valid and :invalid pseudo-classes<br>
-:valid pseudo-class<br>
+### :valid and :invalid pseudo-classes<br>
+**:valid pseudo-class**<br>
 this specifies a state where the input has been validated<br>
 we can specify changes like a green input background or adding a “tick” to inform the user that their data is correct has been validated<br>
 
-:invalid pseudo-class<br>
+**:invalid pseudo-class**<br>
 this specifies a state where the input has been invalidated or has not been validated<br>
 this happens when the collected data does not meet the requirements for the pre-defined patterns for validation<br>
 we can specify changes like a green input background or adding a “tick” to inform the user that their data is correct has been validated<br> 
@@ -1233,10 +1228,10 @@ Client-side vs Server-side validation<br>
 <u>Client-side validation</u> refers to validation which when a client inputs data before the data is submitted to the server.<br>
 Constraint validation comprises all the steps of validation which are introduced into a document on the client-side<br>
 
-<u>Server-side validation</u> involves validation after the data has been submitted up to the server.
+<u>Server-side validation</u> involves validation after the data has been submitted up to the server.<br>
 Languages like php, python & js are called server-side languages because <br>
-js is a client-side language as well though<br>
 They are used to develop code which deploys on server-side rather than client-side<br>
+js is a client-side language as well though<br>
 Optimally, it is advised to provide both client-side and server-side validation to provide double-layer protection<br>
 
 Constraint validation<br>
@@ -1257,6 +1252,4 @@ eg.
 
 _i.e Values which will not appear like a value less than min attr_<br>
 
-
-By using, constraint validation, we provide constraints<br> for validation
 Basically, we follow constraint validation when we follow good-practices for input types<br>
